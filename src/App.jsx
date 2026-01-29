@@ -10,6 +10,7 @@ import ServicePage from './Pages/ServicePage'
 import PortfolioPage from './Pages/PortfolioPage'
 import ContactPage from './Pages/ContactPage'
 import ScrollToTop from './Components/CommonComponents/ScrollToTop'
+import Fun4RajkotPage from './Pages/Fun4RajkotPage'
 
 function App() {
   
@@ -23,6 +24,7 @@ function App() {
     <Routes>
       <Route path='/' element={<HomePage/>}/>
       <Route path='/about' element={<AboutPage/>}/>
+      <Route path='/fun4rajkot' element={<Fun4RajkotPage/>}/>
       <Route path='/services' element={<ServicePage/>}/>
       <Route path='/portfolio' element={<PortfolioPage/>}/>
       <Route path='/contact' element={<ContactPage/>}/>

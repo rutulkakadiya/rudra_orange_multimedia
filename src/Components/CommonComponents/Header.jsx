@@ -118,6 +118,7 @@ const Header = () => {
 
     const navLinks = [
         { name: 'Home', path: '/' },
+        { name: 'Fun4Rajkot', path: '/fun4rajkot' },
         { name: 'About Us', path: '/about' },
         { name: 'Services', path: '/services' },
         { name: 'Portfolio', path: '/portfolio' },
@@ -149,7 +150,7 @@ const Header = () => {
                         {/* Right Side - Address */}
                         <div className="flex items-center gap-6">
                             <div className="flex items-center gap-3 ml-2">
-                               211, Alpha One, Opp. Kruti Onella, 150ft. Ring Road, Rajkot
+                                211, Alpha One, Opp. Kruti Onella, 150ft. Ring Road, Rajkot
                             </div>
                         </div>
                     </div>
@@ -175,24 +176,41 @@ const Header = () => {
                                 {navLinks.map((link, index) => {
                                     const active = isActive(link.path);
 
+                                    // Highlight Fun4Rajkot
+                                    if (link.name === 'Fun4Rajkot') {
+                                        return (
+                                            <div key={index} className="relative group">
+                                                <Link
+                                                    to={link.path}
+                                                    className={`flex items-center text-lg gap-1 px-6 py-2 font-bold transition-all duration-300 rounded-md shadow-lg transform hover:-translate-y-1 ${active
+                                                            ? 'bg-(--first) text-white ring-2 ring-white/20'
+                                                            : 'bg-(--first) text-white hover:opacity-90'
+                                                        }`}
+                                                    onClick={() => setIsMenuOpen(false)}
+                                                >
+                                                    {link.name}
+                                                    {/* Optional: Add an icon or glowing effect if needed, but keeping it simple as per request 'ek hi box me' */}
+                                                </Link>
+                                            </div>
+                                        );
+                                    }
+
                                     return (
                                         <div key={index} className="relative group">
                                             <Link
                                                 to={link.path}
-                                                className={`flex items-center text-lg gap-1 py-2 font-medium transition-all duration-300 relative ${
-                                                    active
+                                                className={`flex items-center text-lg gap-1 py-2 font-medium transition-all duration-300 relative ${active
                                                         ? 'text-(--first)'
                                                         : 'text-white hover:text-(--first)'
-                                                }`}
+                                                    }`}
                                                 onClick={() => setIsMenuOpen(false)} // Close mobile menu if open
                                             >
                                                 {link.name}
 
                                                 {/* Underline Animation */}
                                                 <span
-                                                    className={`absolute -bottom-4 left-0 h-0.5 bg-(--first) transition-all duration-300 ${
-                                                        active ? 'w-full' : 'w-0 group-hover:w-full'
-                                                    }`}
+                                                    className={`absolute -bottom-4 left-0 h-0.5 bg-(--first) transition-all duration-300 ${active ? 'w-full' : 'w-0 group-hover:w-full'
+                                                        }`}
                                                 ></span>
                                             </Link>
                                         </div>
@@ -217,9 +235,8 @@ const Header = () => {
 
                     {/* Mobile Menu */}
                     <div
-                        className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-                            isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-                        }`}
+                        className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                            }`}
                     >
                         <div className="pb-4 space-y-2">
                             {navLinks.map((link, index) => {
@@ -229,11 +246,10 @@ const Header = () => {
                                     <Link
                                         key={index}
                                         to={link.path}
-                                        className={`block px-4 py-3 rounded transition-all duration-300 ${
-                                            active
+                                        className={`block px-4 py-3 rounded transition-all duration-300 ${active
                                                 ? 'text-(--first) bg-white/5 font-semibold'
                                                 : 'text-white hover:bg-white/10'
-                                        }`}
+                                            }`}
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         {link.name}

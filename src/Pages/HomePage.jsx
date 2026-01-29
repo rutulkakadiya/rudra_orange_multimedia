@@ -7,7 +7,7 @@ import Project from "../Components/HomeComponent/Project";
 import StatsCounter from "../Components/HomeComponent/StatsCounter";
 import TestimonialSlider from "../Components/HomeComponent/TestimonialSlider";
 import PartnerScroll from "../Components/HomeComponent/PartnerScroll";
-import SocialMedia from "../Components/HomeComponent/SocialMedia";
+import SocialMedia from "../Components/Fun4RajkotComponents/SocialMedia";
 
 
 function HomePage() {
