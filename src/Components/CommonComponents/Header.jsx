@@ -118,7 +118,7 @@ const Header = () => {
 
     const navLinks = [
         { name: 'Home', path: '/' },
-        { name: 'Fun4Rajkot', path: '/fun4rajkot' },
+        { name: 'fun4rajkot', path: '/fun4rajkot' },
         { name: 'About Us', path: '/about' },
         { name: 'Services', path: '/services' },
         { name: 'Portfolio', path: '/portfolio' },
