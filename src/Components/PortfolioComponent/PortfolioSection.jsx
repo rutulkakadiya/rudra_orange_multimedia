@@ -1,106 +1,120 @@
 import React, { useEffect, useState } from "react";
 import { X, ArrowLeft } from "lucide-react";
-import logodesign from '../../assets/ServicesImg/logodesign.jpg';
-import photography from '../../assets/ServicesImg/photography.jpg';
-import videography from '../../assets/ServicesImg/videography.jpg';
-import catelogdesign from '../../assets/ServicesImg/catelogdesign.jpg';
-import stationarydesign from '../../assets/ServicesImg/stationarydesign.jpg';
-import socialmediapost from '../../assets/ServicesImg/sosicalmedia post.jpg';
-import packagingdesign from '../../assets/ServicesImg/pacakgingdesign.jpg';
+import logodesign from '../../assets/Portfolio/Cover_Photo/Logo.jpg';
+import videography from '../../assets/Portfolio/Cover_Photo/Video.jpg';
+import catelogdesign from '../../assets/Portfolio/Cover_Photo/Brochure.jpg';
+import holding from '../../assets/Portfolio/Cover_Photo/Out Door.jpg';
+import stationarydesign from '../../assets/Portfolio/Cover_Photo/Stationery.jpg';
 import RippleButton from "../CommonComponents/RippleButton";
 
-// logodesign
-import logo1 from '../../assets/Logo/logo (1).jpg';
-import logo2 from '../../assets/Logo/logo (2).jpg';
-import logo3 from '../../assets/Logo/logo (3).jpg';
-import logo4 from '../../assets/Logo/logo (4).jpg';
-import logo5 from '../../assets/Logo/logo (5).jpg';
-import logo6 from '../../assets/Logo/logo (6).jpg';
-import logo7 from '../../assets/Logo/logo (7).jpg';
-import logo8 from '../../assets/Logo/logo (8).jpg';
 
 // videography
 
-import video1 from '../../assets/Videography/video (1).png';
-import video2 from '../../assets/Videography/video (2).png';
-import video3 from '../../assets/Videography/video (3).png';
+import video1 from '../../assets/Portfolio/Videography/video (1).png';
+import video2 from '../../assets/Portfolio/Videography/video (2).png';
+import video3 from '../../assets/Portfolio/Videography/video (3).png';
 
 // photography
 
-import photo1 from '../../assets/Photography/p (1).jpg';
-import photo2 from '../../assets/Photography/p (2).jpg';
-import photo3 from '../../assets/Photography/p (3).jpg';
-import photo4 from '../../assets/Photography/p (4).jpg';
-import photo5 from '../../assets/Photography/p (5).jpg';
-import photo6 from '../../assets/Photography/p (6).jpg';
-import photo7 from '../../assets/Photography/p (7).jpg';
-import photo8 from '../../assets/Photography/p (8).jpg';
-import photo9 from '../../assets/Photography/photography (1).jpg';
-import photo10 from '../../assets/Photography/photography (3).jpg';
+import photo1 from '../../assets/Portfolio/02_Photography/Photo_01.jpg';
+import photo2 from '../../assets/Portfolio/02_Photography/Photo_02.jpg';
+import photo3 from '../../assets/Portfolio/02_Photography/Photo_03.jpg';
+import photo4 from '../../assets/Portfolio/02_Photography/Photo_04.jpg';
+import photo5 from '../../assets/Portfolio/02_Photography/Photo_05.jpg';
+import photo6 from '../../assets/Portfolio/02_Photography/Photo_06.jpg';
+import photo7 from '../../assets/Portfolio/02_Photography/Photo_07.jpg';
+import photo8 from '../../assets/Portfolio/02_Photography/Photo_08.jpg';
+import photo9 from '../../assets/Portfolio/02_Photography/Photo_09.jpg';
+import photo10 from '../../assets/Portfolio/02_Photography/Photo_10.jpg';
+import photo11 from '../../assets/Portfolio/02_Photography/Photo_11.jpg';
+import photo12 from '../../assets/Portfolio/02_Photography/Photo_12.jpg';
+import photo13 from '../../assets/Portfolio/02_Photography/Photo_13.jpg';
+import photo14 from '../../assets/Portfolio/02_Photography/Photo_14.jpg';
+import photo15 from '../../assets/Portfolio/02_Photography/Photo_15.jpg';
+import photo16 from '../../assets/Portfolio/02_Photography/Photo_16.jpg';
+
+// logodesign
+import logo1 from '../../assets/Portfolio/03_Logo/01.jpg';
+import logo2 from '../../assets/Portfolio/03_Logo/02.jpg';
+import logo3 from '../../assets/Portfolio/03_Logo/03.jpg';
+import logo4 from '../../assets/Portfolio/03_Logo/04.jpg';
+import logo5 from '../../assets/Portfolio/03_Logo/05.jpg';
+import logo6 from '../../assets/Portfolio/03_Logo/06.jpg';
+import logo7 from '../../assets/Portfolio/03_Logo/07.jpg';
+import logo8 from '../../assets/Portfolio/03_Logo/08.jpg';
+
 
 // stationarydesign
 
-import stationary1 from '../../assets/StationeryDesign/stationary (1).jpg';
-import stationary2 from '../../assets/StationeryDesign/stationary (2).jpg';
-import stationary3 from '../../assets/StationeryDesign/stationary (3).jpg';
-import stationary4 from '../../assets/StationeryDesign/stationary (4).jpg';
-import stationary5 from '../../assets/StationeryDesign/stationary (5).jpg';
-import stationary6 from '../../assets/StationeryDesign/stationary (6).jpg';
-import stationary7 from '../../assets/StationeryDesign/stationary (7).jpg';
-import stationary8 from '../../assets/StationeryDesign/stationry (8).jpg';
+import stationary1 from '../../assets/Portfolio/04_Stationery/01.jpg';
+import stationary2 from '../../assets/Portfolio/04_Stationery/02.jpg';
+import stationary3 from '../../assets/Portfolio/04_Stationery/03.jpg';
+import stationary4 from '../../assets/Portfolio/04_Stationery/04.jpg';
+import stationary5 from '../../assets/Portfolio/04_Stationery/05.jpg';
+import stationary6 from '../../assets/Portfolio/04_Stationery/06.jpg';
 
 // catelogdesign
 
-import borchure1 from '../../assets/BrochureDesign/brochure (1).jpg';
-import borchure2 from '../../assets/BrochureDesign/brochure (2).jpg';
-import borchure3 from '../../assets/BrochureDesign/brochure (3).jpg';
-import borchure4 from '../../assets/BrochureDesign/brochure (4).jpg';
+import borchure1 from '../../assets/Portfolio/05_Brochure/01.jpg';
+import borchure2 from '../../assets/Portfolio/05_Brochure/02.jpg';
+import borchure3 from '../../assets/Portfolio/05_Brochure/03.jpg';
+import borchure4 from '../../assets/Portfolio/05_Brochure/04.jpg';
+import borchure5 from '../../assets/Portfolio/05_Brochure/05.jpg';
+import borchure6 from '../../assets/Portfolio/05_Brochure/06.jpg';
 
 // socialmediapost
+import social from '../../assets/Portfolio/Cover_Photo/Social media.jpg';
 
-import post1 from '../../assets/SocialMediaBranding/post (1).jpg';
-import post2 from '../../assets/SocialMediaBranding/post (2).jpg';
-import post3 from '../../assets/SocialMediaBranding/post (3).jpg';
-import post4 from '../../assets/SocialMediaBranding/post (4).jpg';
-import post5 from '../../assets/SocialMediaBranding/post (5).jpg';
-import post6 from '../../assets/SocialMediaBranding/post (6).jpg';
-import post7 from '../../assets/SocialMediaBranding/post (7).jpg';
-import social from '../../assets/SocialMediaBranding/social.jpg';
+import post1 from '../../assets/Portfolio/06_Social_Media/01.jpg';
+import post2 from '../../assets/Portfolio/06_Social_Media/02.jpg';
+import post3 from '../../assets/Portfolio/06_Social_Media/03.jpg';
+import post4 from '../../assets/Portfolio/06_Social_Media/04.jpg';
+import post5 from '../../assets/Portfolio/06_Social_Media/05.jpg';
+import post6 from '../../assets/Portfolio/06_Social_Media/06.jpg';
+import post7 from '../../assets/Portfolio/06_Social_Media/07.jpg';
+import post8 from '../../assets/Portfolio/06_Social_Media/08.jpg';
+import post9 from '../../assets/Portfolio/06_Social_Media/09.jpg';
+import post10 from '../../assets/Portfolio/06_Social_Media/10.jpg';
+import post11 from '../../assets/Portfolio/06_Social_Media/11.jpg';
+import post12 from '../../assets/Portfolio/06_Social_Media/12.jpg';
 
 // outdoorhoarding
 
-import holding1 from '../../assets/OutdoorHoardingBanners/holding (1).jpg';
-import holding2 from '../../assets/OutdoorHoardingBanners/holding (2).jpg';
-import holding3 from '../../assets/OutdoorHoardingBanners/holding (3).jpg';
-import holding4 from '../../assets/OutdoorHoardingBanners/holding (4).jpg';
-import holding5 from '../../assets/OutdoorHoardingBanners/holding (5).jpg';
-import holding6 from '../../assets/OutdoorHoardingBanners/holding (6).jpg';
-import holding7 from '../../assets/OutdoorHoardingBanners/holding (7).jpg';
-import holding8 from '../../assets/OutdoorHoardingBanners/holding (8).jpg';
+import holding1 from '../../assets/Portfolio/07_Out_Door/01.jpg';
+import holding2 from '../../assets/Portfolio/07_Out_Door/02.jpg';
+import holding3 from '../../assets/Portfolio/07_Out_Door/03.jpg';
+import holding4 from '../../assets/Portfolio/07_Out_Door/04.jpg';
+import holding5 from '../../assets/Portfolio/07_Out_Door/05.jpg';
+import holding6 from '../../assets/Portfolio/07_Out_Door/06.jpg';
+import holding7 from '../../assets/Portfolio/07_Out_Door/07.jpg';
+import holding8 from '../../assets/Portfolio/07_Out_Door/08.jpg';
 
 //  packagingdesign
 
-import package1 from '../../assets/PackagingDesing/packaging (1).jpg';
-import package2 from '../../assets/PackagingDesing/packaging (2).jpg';
-import package3 from '../../assets/PackagingDesing/packaging (3).jpg';
-import package4 from '../../assets/PackagingDesing/packaging (4).jpg';
-import package5 from '../../assets/PackagingDesing/packaging (5).jpg';
-import package6 from '../../assets/PackagingDesing/packaging (6).jpg';
-import package7 from '../../assets/PackagingDesing/packaging (7).jpg';
-import package8 from '../../assets/PackagingDesing/packaging (8).jpg';
+import packages from '../../assets/Portfolio/Cover_Photo/Packaging.jpg';
+import package1 from '../../assets/Portfolio/08_Packaging/01.jpg';
+import package2 from '../../assets/Portfolio/08_Packaging/02.jpg';
+import package3 from '../../assets/Portfolio/08_Packaging/03.jpg';
+import package4 from '../../assets/Portfolio/08_Packaging/04.jpg';
+import package5 from '../../assets/Portfolio/08_Packaging/05.jpg';
+import package6 from '../../assets/Portfolio/08_Packaging/06.jpg';
+import package7 from '../../assets/Portfolio/08_Packaging/07.jpg';
+import package8 from '../../assets/Portfolio/08_Packaging/08.jpg';
 
 // paperprinting
 
-import paper1 from '../../assets/PaperPrinting/paper (1).jpg';
-import paper2 from '../../assets/PaperPrinting/paper (2).jpg';
-import paper3 from '../../assets/PaperPrinting/paper (3).jpg';
-import paper4 from '../../assets/PaperPrinting/paper (4).jpg';
-import paper5 from '../../assets/PaperPrinting/paper (5).jpg';
-import paper6 from '../../assets/PaperPrinting/paper (6).jpg';
-import paper7 from '../../assets/PaperPrinting/paper (7).jpg';
-import paper8 from '../../assets/PaperPrinting/paper (8).jpg';
-import paper9 from '../../assets/PaperPrinting/paper (9).jpg';
-import paper10 from '../../assets/PaperPrinting/paper (10).jpg';
+import paper from '../../assets/Portfolio/Cover_Photo/Paper Printing.jpg';
+import paper1 from '../../assets/Portfolio/09_Paper_Print/01.jpg';
+import paper2 from '../../assets/Portfolio/09_Paper_Print/02.jpg';
+import paper3 from '../../assets/Portfolio/09_Paper_Print/03.jpg';
+import paper4 from '../../assets/Portfolio/09_Paper_Print/04.jpg';
+import paper5 from '../../assets/Portfolio/09_Paper_Print/05.jpg';
+import paper6 from '../../assets/Portfolio/09_Paper_Print/06.jpg';
+import paper7 from '../../assets/Portfolio/09_Paper_Print/07.jpg';
+import paper8 from '../../assets/Portfolio/09_Paper_Print/08.jpg';
+import paper9 from '../../assets/Portfolio/09_Paper_Print/09.jpg';
+import paper10 from '../../assets/Portfolio/09_Paper_Print/10.jpg';
+import paper11 from '../../assets/Portfolio/09_Paper_Print/11.jpg';
 
 const PortfolioSection = () => {
   const data = [
@@ -112,7 +126,7 @@ const PortfolioSection = () => {
         {
           title: "Brand Film",
           image:
-           video1,
+            video1,
         },
         {
           title: "Corporate Video",
@@ -131,12 +145,12 @@ const PortfolioSection = () => {
       cover:
         photo10,
       works: [
-         {
+        {
           title: "Product Shoot",
           image:
             photo9,
         },
-         {
+        {
           title: "Product Shoot",
           image:
             photo10,
@@ -181,54 +195,84 @@ const PortfolioSection = () => {
           image:
             photo8,
         },
+        {
+          title: "Product Shoot",
+          image:
+            photo11,
+        },
+        {
+          title: "Product Shoot",
+          image:
+            photo12,
+        },
+        {
+          title: "Product Shoot",
+          image:
+            photo13,
+        },
+        {
+          title: "Product Shoot",
+          image:
+            photo14,
+        },
+        {
+          title: "Product Shoot",
+          image:
+            photo15,
+        },
+        {
+          title: "Product Shoot",
+          image:
+            photo16,
+        },
       ],
     },
     {
       category: "Logo",
       cover:
-        logo8,
+        logodesign,
       works: [
         {
           title: "Corporate Logo",
           image:
-           logo1,
+            logo1,
         },
         {
           title: "Corporate Logo",
           image:
-           logo2,
+            logo2,
         },
         {
           title: "Corporate Logo",
           image:
-           logo3,
+            logo3,
         },
         {
           title: "Corporate Logo",
           image:
-           logo4,
+            logo4,
         },
         {
           title: "Corporate Logo",
           image:
-           logo5,
+            logo5,
         },
         {
           title: "Corporate Logo",
           image:
-           logo6,
+            logo6,
         },
         {
           title: "Corporate Logo",
           image:
-           logo7,
+            logo7,
         },
         {
           title: "Corporate Logo",
           image:
-           logo8,
+            logo8,
         },
-  
+
       ],
     },
     {
@@ -239,42 +283,32 @@ const PortfolioSection = () => {
         {
           title: "Business Card",
           image:
-           stationary1,
+            stationary1,
         },
         {
           title: "Business Card",
           image:
-           stationary2,
+            stationary2,
         },
         {
           title: "Business Card",
           image:
-           stationary3,
+            stationary3,
         },
         {
           title: "Business Card",
           image:
-           stationary4,
+            stationary4,
         },
         {
           title: "Business Card",
           image:
-           stationary5,
+            stationary5,
         },
         {
           title: "Business Card",
           image:
-           stationary6,
-        },
-        {
-          title: "Business Card",
-          image:
-           stationary7,
-        },
-        {
-          title: "Business Card",
-          image:
-           stationary8,
+            stationary6,
         },
       ],
     },
@@ -286,22 +320,32 @@ const PortfolioSection = () => {
         {
           title: "Corporate Brochure",
           image:
-           borchure1,
+            borchure1,
         },
         {
           title: "Corporate Brochure",
           image:
-           borchure2,
+            borchure2,
         },
         {
           title: "Corporate Brochure",
           image:
-           borchure3,
+            borchure3,
         },
         {
           title: "Corporate Brochure",
           image:
-           borchure4,
+            borchure4,
+        },
+        {
+          title: "Corporate Brochure",
+          image:
+            borchure5,
+        },
+        {
+          title: "Corporate Brochure",
+          image:
+            borchure6,
         },
       ],
     },
@@ -311,46 +355,71 @@ const PortfolioSection = () => {
         social,
       works: [
         {
-          title: "Instagram Campaign",
+          title: "Social Media Post",
           image:
-           post1,
+            post1,
         },
         {
-          title: "Instagram Campaign",
+          title: "Social Media Post",
           image:
-           post2,
+            post2,
         },
         {
-          title: "Instagram Campaign",
+          title: "Social Media Post",
           image:
-           post3,
+            post3,
         },
         {
-          title: "Instagram Campaign",
+          title: "Social Media Post",
           image:
-           post4,
+            post4,
         },
         {
-          title: "Instagram Campaign",
+          title: "Social Media Post",
           image:
-           post5,
+            post5,
         },
         {
-          title: "Instagram Campaign",
+          title: "Social Media Post",
           image:
-           post6,
+            post6,
         },
         {
-          title: "Instagram Campaign",
+          title: "Social Media Post",
           image:
-           post7,
+            post7,
+        },
+        {
+          title: "Social Media Post",
+          image:
+            post8,
+        },
+        {
+          title: "Social Media Post",
+          image:
+            post9,
+        },
+        {
+          title: "Social Media Post",
+          image:
+            post10,
+        },
+        {
+          title: "Social Media Post",
+          image:
+            post11,
+        },
+        {
+          title: "Social Media Post",
+          image:
+            post12,
         },
       ],
     },
     {
       category: "Outdoor Hoarding Banners",
       cover:
-        holding1,
+        holding,
       works: [
         {
           title: "Hoarding Design",
@@ -397,7 +466,7 @@ const PortfolioSection = () => {
     {
       category: "Packaging Design",
       cover:
-        package4,
+        packages,
       works: [
         {
           title: "Product Packaging",
@@ -444,57 +513,62 @@ const PortfolioSection = () => {
     {
       category: "Paper Printing",
       cover:
-        paper6,
+        paper,
       works: [
         {
           title: "Print Media",
           image:
-           paper1,
+            paper1,
         },
         {
           title: "Print Media",
           image:
-           paper2,
+            paper2,
         },
         {
           title: "Print Media",
           image:
-           paper3,
+            paper3,
         },
         {
           title: "Print Media",
           image:
-           paper4,
+            paper4,
         },
         {
           title: "Print Media",
           image:
-           paper5,
+            paper5,
         },
         {
           title: "Print Media",
           image:
-           paper6,
+            paper6,
         },
         {
           title: "Print Media",
           image:
-           paper7,
+            paper7,
         },
         {
           title: "Print Media",
           image:
-           paper8,
+            paper8,
         },
         {
           title: "Print Media",
           image:
-           paper9,
+            paper9,
         },
         {
           title: "Print Media",
           image:
-           paper10,
+            paper10,
+        },
+        {
+          title: "Print Media",
+          image:
+            paper11,
         },
       ],
     },
@@ -502,15 +576,15 @@ const PortfolioSection = () => {
 
   const [activeCategory, setActiveCategory] = useState(null);
   const [activeImage, setActiveImage] = useState(null);
-    useEffect(() => {
-      window.scrollTo(0, 0);
-    });
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
 
   return (
     <section className="bg-(--dark-black) text-white border-t border-white/5">
       <div className="container mx-auto">
 
-       <div className="w-full flex md:flex-row flex-col justify-between items-center border-b border-white/5 py-14 px-10">
+        <div className="w-full flex md:flex-row flex-col justify-between items-center border-b border-white/5 py-14 px-10">
           <div>
             <p className="text-md text-(--first) mb-2">// Portfolio</p>
             <h2 className="text-3xl lg:text-6xl font-semibold leading-tight">
@@ -566,16 +640,16 @@ const PortfolioSection = () => {
         {activeCategory && (
           <>
 
-           
+
             <button
               onClick={() => setActiveCategory(null)}
               className="my-10 px-10"
             >
-                 <RippleButton className="">Back to portfolio</RippleButton>
-             
+              <RippleButton className="">Back to portfolio</RippleButton>
+
             </button>
 
-          
+
 
             <div className="grid grid-cols-1 md:grid-cols-2">
               {activeCategory.works.map((work, i) => (

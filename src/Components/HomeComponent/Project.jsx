@@ -126,15 +126,15 @@
 import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef, useState } from "react";
 import RippleButton from "../CommonComponents/RippleButton";
-import logodesign from '../../assets/CoverImg/Logo.jpg';
-import photography from '../../assets/Photography/photography (3).jpg';
-import videography from '../../assets/CoverImg/Video.jpg';
-import catelogdesign from '../../assets/CoverImg/Brochure.jpg';
-import stationarydesign from '../../assets/CoverImg/Stationery.jpg';
-import socialmediapost from '../../assets/CoverImg/Social media.jpg';
-import packagingdesign from '../../assets/CoverImg/Packaging.jpg';
-import paperprinting from '../../assets/CoverImg/Paper Printing.jpg';
-import outdoorhoarding from '../../assets/CoverImg/Out Door.jpg';
+import logodesign from '../../assets/Portfolio/Cover_Photo/Logo.jpg';
+import photography from '../../assets/Portfolio/02_Photography/Photo_10.jpg';
+import videography from '../../assets/Portfolio/Cover_Photo/video.jpg';
+import catelogdesign from '../../assets/Portfolio/Cover_Photo/Brochure.jpg';
+import stationarydesign from '../../assets/Portfolio/Cover_Photo/Stationery.jpg';
+import socialmediapost from '../../assets/Portfolio/Cover_Photo/Social media.jpg';
+import packagingdesign from '../../assets/Portfolio/Cover_Photo/Packaging.jpg';
+import paperprinting from '../../assets/Portfolio/Cover_Photo/Paper Printing.jpg';
+import outdoorhoarding from '../../assets/Portfolio/Cover_Photo/Out Door.jpg';
 import { Link } from "react-router-dom";
 
 const Project = () => {
