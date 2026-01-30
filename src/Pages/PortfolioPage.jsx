@@ -52,10 +52,10 @@ function PortfolioPage() {
       {!activeCompany && <PortfolioSection />}
 
       {/* Company work section (controls open/close) */}
-      <CompanyWorkSection
+      {/* <CompanyWorkSection
         activeCompany={activeCompany}
         onToggle={setActiveCompany}
-      />
+      /> */}
     </div>
   );
 }

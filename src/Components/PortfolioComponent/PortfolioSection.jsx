@@ -598,20 +598,20 @@ const PortfolioSection = () => {
         </div>
         {/* ================= MAIN CATEGORY VIEW ================= */}
         {!activeCategory && (
-          <div className="grid grid-cols-1 md:grid-cols-2 ">
+          <div className="grid grid-cols-1 lg:grid-cols-2 ">
             {data.map((item, i) => (
               <div
                 key={i}
                 onClick={() => setActiveCategory(item)}
                 className="relative cursor-pointer overflow-hidden
                            border border-white/5 
-                           transition-all duration-500 p-15"
+                           transition-all duration-500 p-4 sm:p-15"
               >
                 {/* Background Image */}
                 <img
                   src={item.cover}
                   alt={item.title}
-                  className="w-full h-110 object-cover hover:scale-105 rounded-3xl duration-1000"
+                  className="w-full h-full sm:h-110 object-cover hover:scale-105 rounded-3xl duration-1000"
                 />
 
                 {/* Dark Overlay */}
