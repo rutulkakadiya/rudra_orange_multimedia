@@ -618,13 +618,13 @@ const PortfolioSection = () => {
                 {/* <div className="absolute inset-0 bg-black/20" /> */}
 
                 {/* Content Box */}
-                <div className="absolute bottom-20 left-20 right-66
+                <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 lg:bottom-20 lg:left-20 lg:right-66
                                 bg-black/60 backdrop-blur-md
-                                rounded-xl p-6">
-                  <p className="text-2xl text-gray-300 mb-1">
+                                rounded-xl p-4 md:p-6">
+                  <p className="text-lg md:text-2xl text-gray-300 mb-1">
                     {item.category}
                   </p>
-                  <h3 className="text-2xl font-semibold mb-2">
+                  <h3 className="text-xl md:text-2xl font-semibold mb-2">
                     {item.title}
                   </h3>
                   <span className="text-sm text-(--first)">
