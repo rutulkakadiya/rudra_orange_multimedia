@@ -217,14 +217,11 @@ export default function Footer() {
                 </div>
                 <h3 className="font-semibold text-lg py-4">TALK US</h3>
                 <div className="text-center flex flex-col text-gray-400">
-                  <a to="#" className="hover:text-black group-hover:text-white duration-700 transition">
+                  <a target='_blank' href="https://www.facebook.com/orangemultimediarajkot" className="hover:text-black group-hover:text-white cursor-pointer duration-700 transition">
                     Facebook
                   </a>
-                  <a to="#" className="hover:text-black group-hover:text-white duration-700 transition">
+                  <a target='_blank' href="https://www.instagram.com/orange_multimedia" className="hover:text-black group-hover:text-white cursor-pointer duration-700 transition">
                     Instagram
-                  </a>
-                  <a to="#" className="hover:text-black group-hover:text-white duration-700 transition">
-                    LinkedIn
                   </a>
                 </div>
               </div>

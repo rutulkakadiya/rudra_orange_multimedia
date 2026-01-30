@@ -148,16 +148,6 @@ const PortfolioSection = () => {
         {
           title: "Product Shoot",
           image:
-            photo9,
-        },
-        {
-          title: "Product Shoot",
-          image:
-            photo10,
-        },
-        {
-          title: "Product Shoot",
-          image:
             photo1,
         },
         {
@@ -194,6 +184,16 @@ const PortfolioSection = () => {
           title: "Product Shoot",
           image:
             photo8,
+        },
+        {
+          title: "Product Shoot",
+          image:
+            photo9,
+        },
+        {
+          title: "Product Shoot",
+          image:
+            photo10,
         },
         {
           title: "Product Shoot",

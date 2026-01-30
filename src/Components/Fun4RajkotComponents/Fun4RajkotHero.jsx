@@ -8,7 +8,7 @@ const Fun4RajkotHero = () => {
 
                 {/* CENTER CONTENT */}
                 <div className="text-center max-w-4xl mx-auto px-6 md:px-10">
-                    <p className="text-md text-(--first) mb-2">// Social Media Brand</p>
+                    <p className="text-md text-(--first) mb-2">// Digital Outreach Platform</p>
 
                     <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
                         Rajkot’s Own{" "}
@@ -18,7 +18,7 @@ const Fun4RajkotHero = () => {
                         & Updates Platform
                     </h2>
 
-                    <p className="mt-6 text-white text-lg leading-relaxed">
+                    <p className="mt-6 text-white text-[16px] leading-relaxed">
                         fun4rajkot is a dynamic social media advertising and city-updates agency
                         dedicated to bringing the latest happenings, promotions, events, and fun
                         content of Rajkot to one engaging platform. We help brands, businesses, and

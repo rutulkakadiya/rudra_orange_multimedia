@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { Camera, Video, Brush, PenTool, Megaphone, Monitor, Flag, Package, ScrollText } from "lucide-react";
 import logodesign from '../../assets/Portfolio/Cover_Photo/Logo.jpg';
 import photography from '../../assets/Portfolio/02_Photography/Photo_10.jpg';
@@ -23,7 +24,7 @@ const services = [
     image: photography,
     icon: Camera,
   },
-  
+
   {
     title: "Logo",
     desc: "Strategic branding solutions that define identity and elevate brand presence.",
@@ -36,7 +37,7 @@ const services = [
     image: stationarydesign,
     icon: PenTool,
   },
-  
+
   {
     title: "Brochure Design",
     desc: "Targeted campaigns that boost visibility, engagement, and conversions.",
@@ -75,25 +76,25 @@ const OurServices = () => {
     <section className="bg-(--dark-black) text-white border-t border-white/5">
       <div className="container mx-auto">
 
-      <div className="w-full flex lg:flex-row py-10 flex-col justify-between lg:items-center border-b border-white/5 px-10 text-white">
-  <div>
-    <p className="text-md text-(--first) mb-2">// Our Services</p>
+        <div className="w-full flex lg:flex-row py-10 flex-col justify-between lg:items-center border-b border-white/5 px-10 text-white">
+          <div>
+            <p className="text-md text-(--first) mb-2">// Our Services</p>
 
-    <h2 className="text-2xl lg:text-6xl font-semibold leading-tight mb-5 md:w-xl">
-      Creative <span className="text-(--first)">Solutions </span> 
-      to <span className="text-(--first)">elevate</span> your brand
-    </h2>
-  </div>
+            <h2 className="text-2xl lg:text-6xl font-semibold leading-tight mb-5 md:w-xl">
+              Creative <span className="text-(--first)">Solutions </span>
+              to <span className="text-(--first)">elevate</span> your brand
+            </h2>
+          </div>
 
-  <div>
-    <p className="text-gray-400 leading-7 mb-6 md:w-xl">
-      We offer end-to-end creative services — from branding and visual identity
-      to photography, videography, and digital design. Every service is crafted
-      with strategy, creativity, and a strong focus on results.
-    </p>
-    <div className="h-1 w-20 bg-(--first)"></div>
-  </div>
-</div>
+          <div>
+            <p className="text-gray-400 leading-7 mb-6 md:w-xl">
+              We offer end-to-end creative services — from branding and visual identity
+              to photography, videography, and digital design. Every service is crafted
+              with strategy, creativity, and a strong focus on results.
+            </p>
+            <div className="h-1 w-20 bg-(--first)"></div>
+          </div>
+        </div>
 
 
 
@@ -137,12 +138,13 @@ const OurServices = () => {
                 <p className="text-sm text-gray-400 leading-relaxed mb-4">
                   {service.desc}
                 </p>
-                <button
+                <Link
+                  to="/portfolio"
                   className="text-sm font-semibold text-(--first)
                              hover:underline tracking-wide"
                 >
                   View Service →
-                </button>
+                </Link>
               </div>
             </div>
           ))}

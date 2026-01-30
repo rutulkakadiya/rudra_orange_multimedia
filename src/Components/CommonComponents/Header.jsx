@@ -177,7 +177,7 @@ const Header = () => {
                                     const active = isActive(link.path);
 
                                     // Highlight Fun4Rajkot
-                                    if (link.name === 'Fun4Rajkot') {
+                                    if (link.name === 'fun4rajkot') {
                                         return (
                                             <div key={index} className="relative group">
                                                 <Link

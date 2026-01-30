@@ -1,6 +1,8 @@
 import React from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import RippleButton from "../CommonComponents/RippleButton";
+import RealBookPDFViewer from "../PortfolioComponent/RealBookPDFViewer";
+
 
 const ContactSection = () => {
   return (
@@ -54,9 +56,9 @@ const ContactSection = () => {
                 Send Message
               </button> */}
 
-               <div className="">
-                          <RippleButton className="text-sm">Send Message</RippleButton>
-                              </div>
+              <div className="">
+                <RippleButton className="text-sm">Send Message</RippleButton>
+              </div>
             </form>
           </div>
 
@@ -73,42 +75,24 @@ const ContactSection = () => {
               {/* <div className="absolute inset-0 bg-black/30" /> */}
             </div>
 
-          
+
           </div>
         </div>
 
-        {/* <div className="">
-            <div className="grid grid-cols-1 sm:grid-cols-3">
-              <div className="contact-card border-r border-white/5 p-10 flex flex-col items-center py-15">
-                <Phone className="mb-4 text-(--first)" />
-                <h4 className="font-semibold mb-2">Phone</h4>
-                <p className="text-sm text-gray-400">
-                  + 91 97123 77811
-                </p>
-                <p className="text-sm text-gray-400">
-                  + 91 80000 77811
-                </p>
-              </div>
+        <div className="">
 
-              <div className="contact-card border-r border-b border-white/5 p-10 flex flex-col items-center py-15">
-                <Mail className="mb-4 text-(--first)" />
-                <h4 className="font-semibold mb-2">Email</h4>
-                <p className="text-md text-gray-400">
-                theorangemultimedia@gmail.com
-                </p>
-              </div>
+          {/* ================= BROCHURE ================= */}
+          <div className="w-full text-center py-20 border-t border-white/5">
+            <p className="text-sm uppercase tracking-[0.3em] text-(--first) mb-4">
+              Our Brochure
+            </p>
+            <h2 className="text-3xl lg:text-5xl font-semibold mb-12">
+              View Our <span className="text-(--first)">Brochure</span>
+            </h2>
+            <RealBookPDFViewer />
+          </div>
+        </div>
 
-              <div className="contact-card border-b border-white/5 p-10 flex flex-col items-center py-15">
-                <MapPin className="mb-4 text-(--first)" />
-                <h4 className="font-semibold mb-2">Address</h4>
-                <p className="text-sm text-gray-400">
-                  Rajkot, Gujarat, India
-                </p>
-              </div>
-            </div>
-        </div> */}
-
-         
 
         {/* ================= MAP ================= */}
         <div className="w-full h-130 p-15 border-t border-white/5">

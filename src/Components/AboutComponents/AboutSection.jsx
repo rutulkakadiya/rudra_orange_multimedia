@@ -153,6 +153,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import RippleButton from "../CommonComponents/RippleButton";
+import { Link } from "react-router-dom";
 
 const skills = [
   { label: "Video Editing", value: 85 },
@@ -239,7 +240,7 @@ const AboutSection = () => {
             </div>
 
                 <div className="mt-10">
-            <RippleButton className="text-sm">Let’s Work Together</RippleButton>
+            <Link to="/contact"><RippleButton className="text-sm">Let’s Work Together</RippleButton></Link>
                 </div>
 
             {/* <button className="mt-10 px-10 py-4 rounded-full bg-white text-black font-semibold hover:bg-(--first) transition-all duration-300 shadow-lg">

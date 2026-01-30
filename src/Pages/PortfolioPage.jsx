@@ -46,7 +46,7 @@ function PortfolioPage() {
       />
 
     {/* <HeyzineBlackFlipbook /> */}
-    <RealBookPDFViewer />
+    {/* <RealBookPDFViewer /> */}
 
       {/* Show portfolio grid ONLY when no company is open */}
       {!activeCompany && <PortfolioSection />}

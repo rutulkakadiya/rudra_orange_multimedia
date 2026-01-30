@@ -209,6 +209,7 @@
 import React from "react";
 import { Megaphone, PenTool, Wand2, Layers, Palette, Cpu } from "lucide-react";
 import RippleButton from "../CommonComponents/RippleButton";
+import { Link } from "react-router-dom";
 
 export default function ServicesSection() {
   const services = [
@@ -277,7 +278,7 @@ export default function ServicesSection() {
               </p>
 
               {/* NEW BUTTON WITH DIRECTION-BASED HOVER */}
-           <RippleButton>Explore Services</RippleButton>
+           <Link to="/services"><RippleButton>Explore Services</RippleButton></Link>
             </div>
           </div>
 

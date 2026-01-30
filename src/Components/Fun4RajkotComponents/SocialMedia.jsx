@@ -12,7 +12,7 @@ export default function SocialMedia() {
                 {/* LEFT CONTENT */}
                 <div className="border border-white/5 border-l-0">
                     <div className="py-10 px-2 md:py-14">
-                        <p className="text-md text-(--first) mb-2">// Social Media Brand</p>
+                        <p className="text-md text-(--first) mb-2">// Digital Outreach Platform</p>
 
                         <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
                             Fun4Rajkot

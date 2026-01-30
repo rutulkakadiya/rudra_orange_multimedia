@@ -85,6 +85,7 @@
 // }
 
 import React from "react";
+import about_us from "../../assets/HomeImg/about_us.jpg"
 
 export default function AboutUs() {
   const images = [
@@ -96,7 +97,7 @@ export default function AboutUs() {
     {
       title: "Happy Clients",
       desc: "Building successful partnerships over the years.",
-      img: "https://i.pinimg.com/originals/7b/e2/a8/7be2a89d6c2adf9faa77890b3e2c86b4.gif",
+      img: about_us,
     },
   ];
 
