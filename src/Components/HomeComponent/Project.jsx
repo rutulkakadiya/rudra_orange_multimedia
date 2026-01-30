@@ -128,7 +128,7 @@ import { useRef, useState } from "react";
 import RippleButton from "../CommonComponents/RippleButton";
 import logodesign from '../../assets/Portfolio/Cover_Photo/Logo.jpg';
 import photography from '../../assets/Portfolio/02_Photography/Photo_10.jpg';
-import videography from '../../assets/Portfolio/Cover_Photo/video.jpg';
+import videography from '../../assets/Portfolio/Cover_Photo/Video.jpg';
 import catelogdesign from '../../assets/Portfolio/Cover_Photo/Brochure.jpg';
 import stationarydesign from '../../assets/Portfolio/Cover_Photo/Stationery.jpg';
 import socialmediapost from '../../assets/Portfolio/Cover_Photo/Social media.jpg';
