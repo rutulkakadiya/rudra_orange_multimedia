@@ -133,7 +133,7 @@ const Header = () => {
             {/* Top Bar */}
             <div className="border-b border-white/5">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="hidden md:flex flex-wrap items-center justify-between py-3 text-sm">
+                    <div className="hidden lg:flex flex-wrap items-center justify-between py-3 text-sm">
                         {/* Left Side - Contact Info */}
                         <div className="flex flex-wrap items-center gap-6">
                             <div className="flex items-center gap-2 hover:text-(--first) transition-colors duration-300">
@@ -163,7 +163,7 @@ const Header = () => {
                     <div className="flex items-center justify-between px-4">
                         <div className="flex items-center">
                             {/* Logo */}
-                            <div className="md:border-r md:border-white/5 flex items-center gap-2 md:px-30 py-3">
+                            <div className="md:border-r md:border-white/5 flex items-center gap-2 md:px-10 lg:px-2 xl:px-30 py-3">
                                 <div className="w-40 md:w-50 h-12 rounded flex items-center justify-center">
                                     <Link to="/">
                                         <img src={logo} alt="Livingspace Logo" className="h-full w-auto" />
@@ -172,7 +172,7 @@ const Header = () => {
                             </div>
 
                             {/* Desktop Navigation */}
-                            <nav className="hidden lg:flex items-center px-12 py-4 gap-12">
+                            <nav className="hidden lg:flex items-center lg:px-6 lg:gap-6 xl:px-12 xl:gap-12 py-4">
                                 {navLinks.map((link, index) => {
                                     const active = isActive(link.path);
 
@@ -183,8 +183,8 @@ const Header = () => {
                                                 <Link
                                                     to={link.path}
                                                     className={`flex items-center text-lg gap-1 px-6 py-2 font-bold transition-all duration-300 rounded-md shadow-lg transform hover:-translate-y-1 ${active
-                                                            ? 'bg-(--first) text-white ring-2 ring-white/20'
-                                                            : 'bg-(--first) text-white hover:opacity-90'
+                                                        ? 'bg-(--first) text-white ring-2 ring-white/20'
+                                                        : 'bg-(--first) text-white hover:opacity-90'
                                                         }`}
                                                     onClick={() => setIsMenuOpen(false)}
                                                 >
@@ -200,8 +200,8 @@ const Header = () => {
                                             <Link
                                                 to={link.path}
                                                 className={`flex items-center text-lg gap-1 py-2 font-medium transition-all duration-300 relative ${active
-                                                        ? 'text-(--first)'
-                                                        : 'text-white hover:text-(--first)'
+                                                    ? 'text-(--first)'
+                                                    : 'text-white hover:text-(--first)'
                                                     }`}
                                                 onClick={() => setIsMenuOpen(false)} // Close mobile menu if open
                                             >
@@ -235,27 +235,50 @@ const Header = () => {
 
                     {/* Mobile Menu */}
                     <div
-                        className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                        className={`lg:hidden overflow-hidden transition-all duration-500 ease-in-out ${isMenuOpen ? 'max-h-[600px] opacity-100' : 'max-h-0 opacity-0'
                             }`}
                     >
-                        <div className="pb-4 space-y-2">
-                            {navLinks.map((link, index) => {
-                                const active = isActive(link.path);
+                        <div className="border-t border-white/5 p-4 space-y-4">
 
-                                return (
-                                    <Link
-                                        key={index}
-                                        to={link.path}
-                                        className={`block px-4 py-3 rounded transition-all duration-300 ${active
+                            {/* Mobile Links */}
+                            <div className="space-y-2">
+                                {navLinks.map((link, index) => {
+                                    const active = isActive(link.path);
+
+                                    return (
+                                        <Link
+                                            key={index}
+                                            to={link.path}
+                                            className={`block px-4 py-3 rounded text-lg transition-all duration-300 ${active
                                                 ? 'text-(--first) bg-white/5 font-semibold'
                                                 : 'text-white hover:bg-white/10'
-                                            }`}
-                                        onClick={() => setIsMenuOpen(false)}
-                                    >
-                                        {link.name}
-                                    </Link>
-                                );
-                            })}
+                                                }`}
+                                            onClick={() => setIsMenuOpen(false)}
+                                        >
+                                            {link.name}
+                                        </Link>
+                                    );
+                                })}
+                            </div>
+
+                            {/* Mobile Extras */}
+                            <div className="border-t border-white/10 pt-4 space-y-4">
+                                <div className="flex items-center justify-between px-2">
+                                    <span className="text-gray-400">Language:</span>
+                                    <LanguageSelector />
+                                </div>
+
+                                <div className="space-y-3 px-2 text-sm text-gray-400">
+                                    <div className="flex items-center gap-3">
+                                        <Mail size={16} className="text-(--first)" />
+                                        <a href="mailto:theorangemultimedia@gmail.com">theorangemultimedia@gmail.com</a>
+                                    </div>
+                                    <div className="flex items-center gap-3">
+                                        <Phone size={16} className="text-(--first)" />
+                                        <a href="tel:+919712377811">+ 91 97123 77811</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

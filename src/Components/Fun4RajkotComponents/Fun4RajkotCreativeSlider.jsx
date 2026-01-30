@@ -1,64 +1,68 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
-
-// Dynamically import all images from fun4rajkot folder
-const fun4rajkotImages = import.meta.glob('../../assets/fun4rajkot/**/*.{jpg,jpeg,png}', { eager: true });
-const allImages = Object.values(fun4rajkotImages).map((img) => img.default);
-const extendedImages = [...allImages, ...allImages, ...allImages];
+import { CheckCircle, X } from 'lucide-react';
+import RippleButton from '../CommonComponents/RippleButton';
+import static_post_1 from '../../assets/fun4rajkot/1 Static Post/01.jpg'
+import static_post_2 from '../../assets/fun4rajkot/1 Static Post/02.jpg'
+import static_post_3 from '../../assets/fun4rajkot/1 Static Post/03.jpg'
+import static_post_4 from '../../assets/fun4rajkot/1 Static Post/04.jpg'
+import static_post_5 from '../../assets/fun4rajkot/1 Static Post/05.jpg'
+import static_post_6 from '../../assets/fun4rajkot/1 Static Post/06.jpg'
+import promotional_banner_1 from '../../assets/fun4rajkot/2 Promotional banners/Promotional banners 1.jpg'
+import promotional_banner_2 from '../../assets/fun4rajkot/2 Promotional banners/Promotional banners 2.jpg'
+import promotional_banner_3 from '../../assets/fun4rajkot/2 Promotional banners/Promotional banners 3.jpg'
+import promotional_banner_4 from '../../assets/fun4rajkot/2 Promotional banners/Promotional banners 4.jpg'
+import social_media_post_1 from '../../assets/fun4rajkot/3 Brand-focused Social Media Posts/01.jpg'
+import social_media_post_2 from '../../assets/fun4rajkot/3 Brand-focused Social Media Posts/02.jpg'
+import social_media_post_3 from '../../assets/fun4rajkot/3 Brand-focused Social Media Posts/03.jpg'
+import social_media_post_4 from '../../assets/fun4rajkot/3 Brand-focused Social Media Posts/04.jpg'
+import social_media_post_5 from '../../assets/fun4rajkot/3 Brand-focused Social Media Posts/05.jpg'
+import social_media_post_6 from '../../assets/fun4rajkot/3 Brand-focused Social Media Posts/06.jpg'
+import social_media_post_7 from '../../assets/fun4rajkot/3 Brand-focused Social Media Posts/07.jpg'
+import social_media_post_8 from '../../assets/fun4rajkot/3 Brand-focused Social Media Posts/08.jpg'
 
 const Fun4RajkotCreativeSlider = () => {
-    const [currentIndex, setCurrentIndex] = React.useState(allImages.length);
-    const [isResetting, setIsResetting] = React.useState(false);
-    const cardWidth = 324; // 300px width + 24px gap
+    const [activeCategory, setActiveCategory] = useState(null);
+    const [activeImage, setActiveImage] = useState(null);
 
-    // Auto-slide logic
-    React.useEffect(() => {
-        if (isResetting) return; // Don't auto-slide while resetting
-
-        const interval = setInterval(() => {
-            nextSlide();
-        }, 3000);
-        return () => clearInterval(interval);
-    }, [currentIndex, isResetting]);
-
-    const nextSlide = () => {
-        if (isResetting) return;
-        setCurrentIndex((prev) => prev + 1);
-    };
-
-    const prevSlide = () => {
-        if (isResetting) return;
-        setCurrentIndex((prev) => prev - 1);
-    };
-
-    const handleAnimationComplete = () => {
-        if (currentIndex >= allImages.length * 2) {
-            setIsResetting(true);
-            setCurrentIndex(currentIndex - allImages.length);
-        } else if (currentIndex < allImages.length) {
-            setIsResetting(true);
-            setCurrentIndex(currentIndex + allImages.length);
+    const creativeShowcase = [
+        {
+            id: 1,
+            title: "Static Post",
+            image: static_post_1,
+            works: [
+                static_post_1, static_post_2, static_post_3,
+                static_post_4, static_post_5, static_post_6
+            ]
+        },
+        {
+            id: 2,
+            title: "Promotional Banners",
+            image: promotional_banner_1,
+            works: [
+                promotional_banner_1, promotional_banner_2, promotional_banner_3,
+                promotional_banner_4
+            ]
+        },
+        {
+            id: 3,
+            title: "Brand-focused Social Media Posts",
+            image: social_media_post_1,
+            works: [
+                social_media_post_1, social_media_post_2, social_media_post_3,
+                social_media_post_4, social_media_post_5, social_media_post_6,
+                social_media_post_7, social_media_post_8
+            ]
         }
-    };
-
-    // Reset the resetting flag after the instant jump is properly registered
-    React.useEffect(() => {
-        if (isResetting) {
-            // A small timeout to allow the render with duration: 0 to complete
-            const timer = setTimeout(() => {
-                setIsResetting(false);
-            }, 50);
-            return () => clearTimeout(timer);
-        }
-    }, [isResetting]);
+    ];
 
     return (
         <section className="container mx-auto border-x border-white/5 overflow-hidden text-white">
             <div className="px-6 lg:px-0 border border-white/5">
+
+                {/* Header is always visible at top */}
                 <div className="px-6 border-b border-white/5 pt-[30px] sm:pt-0">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
-
                         {/* LEFT : TEXT CONTENT */}
                         <div>
                             <p className="text-md text-(--first) mb-2">// Creative Showcase</p>
@@ -67,8 +71,6 @@ const Fun4RajkotCreativeSlider = () => {
                                 Creative Post &{" "}
                                 <span className="text-(--first)">Template Design</span>
                             </h2>
-
-
                         </div>
 
                         {/* RIGHT : IMAGE / MOCKUP */}
@@ -100,45 +102,96 @@ const Fun4RajkotCreativeSlider = () => {
                                 </p>
                             </div>
                         </div>
-
                     </div>
                 </div>
 
-                {/* SLIDER CONTROLS */}
-                <div className="flex justify-end px-6 mt-4 mb-4 gap-4">
-                    <button onClick={prevSlide} className="p-3 rounded-full border border-white/10 hover:bg-(--first) hover:border-(--first) transition-all cursor-pointer">
-                        <ChevronLeft size={24} />
-                    </button>
-                    <button onClick={nextSlide} className="p-3 rounded-full border border-white/10 hover:bg-(--first) hover:border-(--first) transition-all cursor-pointer">
-                        <ChevronRight size={24} />
-                    </button>
-                </div>
-                {/* Wait, I need to import ChevronLeft/Right or use existing icons. Existing imports: CheckCircle. I should import new ones. */}
-
-                {/* SLIDER */}
-                <div className="relative border-y border-white/10 py-10 overflow-hidden">
-                    <motion.div
-                        animate={{ x: -currentIndex * cardWidth }}
-                        transition={{ ease: "easeInOut", duration: isResetting ? 0 : 0.5 }}
-                        onAnimationComplete={handleAnimationComplete}
-                        className="flex gap-6 pl-6"
-                    >
-                        {extendedImages.map((img, index) => (
-                            <motion.div
+                {/* ================= CATEGORY VIEW ================= */}
+                {!activeCategory && (
+                    <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 border-t border-white/5'>
+                        {creativeShowcase.map((item, index) => (
+                            <div
                                 key={index}
-                                className="min-w-[300px] h-[300px] md:h-[400px] border border-white/10 rounded-xl overflow-hidden relative group"
+                                onClick={() => setActiveCategory(item)}
+                                className="h-[400px] md:h-[600px] w-full border-r border-b p-3 md:p-6 border-white/5 overflow-hidden relative group cursor-pointer"
                             >
                                 <img
-                                    src={img}
-                                    alt={`Creative Design ${index + 1}`}
-                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    src={item.image}
+                                    alt={item.title}
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                                     draggable="false"
                                 />
-                                {/* <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors"></div> */}
-                            </motion.div>
+
+                                <div className="absolute bg-black/60 backdrop-blur-md m-4 md:m-8 rounded-xl bottom-0 left-0 right-0 p-4 md:p-8 bg-linear-to-t from-black/90 to-transparent">
+                                    <h3 className="text-2xl font-semibold mb-2 group-hover:text-(--first) transition-colors">
+                                        {item.title}
+                                    </h3>
+                                    <span className="text-sm text-gray-300 group-hover:text-white flex items-center gap-2">
+                                        View Collection <span className="group-hover:translate-x-1 transition-transform">→</span>
+                                    </span>
+                                </div>
+                            </div>
                         ))}
-                    </motion.div>
-                </div>
+                    </div>
+                )}
+
+                {/* ================= DETAIL VIEW ================= */}
+                {activeCategory && (
+                    <div className="px-6 py-10 min-h-[500px] border-t border-white/5">
+                        <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-10 gap-4">
+                            <div>
+                                <h3 className="text-3xl font-bold text-white mb-1">
+                                    {activeCategory.title}
+                                </h3>
+                                <p className="text-gray-400 text-sm">
+                                    // {activeCategory.works.length} Designs Available
+                                </p>
+                            </div>
+
+                            <button
+                                onClick={() => setActiveCategory(null)}
+                            >
+                                <RippleButton>Back to Categories</RippleButton>
+                            </button>
+                        </div>
+
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                            {activeCategory.works.map((imageUrl, i) => (
+                                <div
+                                    key={i}
+                                    onClick={() => setActiveImage(imageUrl)}
+                                    className="relative cursor-pointer overflow-hidden rounded-xl
+                                               border border-white/10 aspect-square group"
+                                >
+                                    <img
+                                        src={imageUrl}
+                                        alt={`${activeCategory.title} ${i + 1}`}
+                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                    />
+                                    {/* Overlay on hover */}
+                                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                )}
+
+                {/* ================= FULL SCREEN IMAGE ================= */}
+                {activeImage && (
+                    <div className="fixed inset-0 z-100 bg-black/95 flex items-center justify-center p-4">
+                        <button
+                            onClick={() => setActiveImage(null)}
+                            className="absolute top-6 right-6 text-white hover:text-(--first) transition-colors p-2"
+                        >
+                            <X size={40} />
+                        </button>
+                        <img
+                            src={activeImage}
+                            alt="Preview"
+                            className="max-w-full max-h-[90vh] rounded-lg shadow-2xl object-contain"
+                        />
+                    </div>
+                )}
+
             </div>
         </section>
     );

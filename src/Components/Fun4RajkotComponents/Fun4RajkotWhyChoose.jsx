@@ -36,7 +36,7 @@ const Fun4RajkotWhyChoose = () => {
                 <div className="mb-14 lg:pl-6 text-center lg:text-left">
                     <p className="text-md text-(--first) mb-2">// Benefits</p>
                     <h2 className="text-4xl lg:text-5xl font-semibold leading-tight">
-                        Why Choose <span className="text-(--first)">Fun4Rajkot?</span>
+                        Why Choose <span className="text-(--first)">fun4rajkot?</span>
                     </h2>
                 </div>
 

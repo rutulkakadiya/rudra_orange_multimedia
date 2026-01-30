@@ -17,7 +17,7 @@ function App() {
 
   return (
     <>
-    <div className='lato bg-(--dark-black)'>
+    <div className='lato bg-(--dark-black) overflow-hidden'>
     <Header/>
       <CustomCursor/>
       <ScrollToTop/>

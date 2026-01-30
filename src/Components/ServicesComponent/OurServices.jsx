@@ -74,7 +74,7 @@ const OurServices = () => {
     <section className="bg-(--dark-black) text-white border-t border-white/5">
       <div className="container mx-auto">
 
-      <div className="w-full flex md:flex-row py-20 flex-col justify-between items-center border-b border-white/5 px-10 text-white">
+      <div className="w-full flex lg:flex-row py-10 flex-col justify-between lg:items-center border-b border-white/5 px-10 text-white">
   <div>
     <p className="text-md text-(--first) mb-2">// Our Services</p>
 

@@ -14,15 +14,15 @@ function HomePage() {
   return (
     <div className="">
       <HeroSection />
-      <SocialMedia/>
+      {/* <SocialMedia/> */}
       <AutoScrollingText direction="right" />
       <AboutUs />
       <AutoScrollingText direction="left" />
       <ServicesSection />
-      <Project/>
-      <StatsCounter/>
-      <PartnerScroll/>
-      <TestimonialSlider/>
+      <Project />
+      <StatsCounter />
+      <PartnerScroll />
+      <TestimonialSlider />
     </div>
   );
 }

@@ -3,24 +3,40 @@ import { motion } from 'framer-motion';
 import social from '../../assets/fun4rajkot/social.png';
 import social1 from '../../assets/fun4rajkot/social_1.png';
 import social2 from '../../assets/fun4rajkot/social_2.png';
+import { CheckCircle } from 'lucide-react';
 
 const Services = [
     {
         title: 'Social Media Advertising',
-        description: 'We design and publish eye-catching advertisement posts for local businesses, restaurants, events, and startups. Optimized for maximum reach.',
-        icon: '📢',
+        description: 'We design and publish eye-catching advertisement posts.',
+        posts: [
+            "Local businesses & brands",
+            "Restaurants, cafes & food outlets",
+            "Events, offers & product launches",
+            "Services, shops & startups",
+        ],
         image: social,
     },
     {
         title: 'Daily Updates & City Buzz',
-        description: 'Stay updated with city news, events, viral content, and everything happening in Rajkot. Informative and engaging posts daily.',
-        icon: '📰',
+        description: 'Stay updated with everything happening in Rajkot.',
+        posts: [
+            "City news & public updates",
+            "Events & celebrations",
+            "Trending topics & viral content",
+            "Fun, engaging & informative posts",
+        ],
         image: social1,
     },
     {
         title: 'Creative Design',
-        description: 'Professional templates, static posts, banners, and brand-focused creatives that are clean, modern, and platform-ready.',
-        icon: '🎨',
+        description: 'We provide professional update plate (template) designs and advertisement creatives.',
+        posts: [
+            "Static Post",
+            "Promotional Banners",
+            "Brand - focused Social Media Posts"
+
+        ],
         image: social2,
     },
 ];
@@ -54,6 +70,15 @@ const Fun4RajkotWhatWeDo = () => {
                             </div>
                             <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
                             <p className="text-gray-400 leading-relaxed">{service.description}</p>
+
+                            <ul className="mt-4 space-y-3">
+                                {service.posts.map((post, i) => (
+                                    <li key={i} className="text-gray-400 flex items-center gap-3">
+                                        <CheckCircle className="text-(--first)" size={18} />
+                                        {post}
+                                    </li>
+                                ))}
+                            </ul>
                         </motion.div>
                     ))}
                 </div>
