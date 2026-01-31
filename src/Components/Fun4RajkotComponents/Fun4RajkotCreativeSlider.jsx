@@ -29,6 +29,7 @@ const Fun4RajkotCreativeSlider = () => {
         {
             id: 1,
             title: "Static Post",
+            subTitle: "// Various Designs",
             image: static_post_1,
             works: [
                 static_post_1, static_post_2, static_post_3,
@@ -38,6 +39,7 @@ const Fun4RajkotCreativeSlider = () => {
         {
             id: 2,
             title: "Promotional Banners",
+            subTitle: "// Attractive Plate Design",
             image: promotional_banner_1,
             works: [
                 promotional_banner_1, promotional_banner_2, promotional_banner_3,
@@ -47,6 +49,7 @@ const Fun4RajkotCreativeSlider = () => {
         {
             id: 3,
             title: "Brand-focused Social Media Posts",
+            subTitle: "// Customise Designs",
             image: social_media_post_1,
             works: [
                 social_media_post_1, social_media_post_2, social_media_post_3,
@@ -60,28 +63,19 @@ const Fun4RajkotCreativeSlider = () => {
         <section className="container mx-auto border-x border-white/5 overflow-hidden text-white">
             <div className="px-6 lg:px-0 border border-white/5">
 
-                
+
                 <div className="px-6 border-b border-white/5 pt-[30px] sm:pt-[50px]">
-                    <div className="grid lg:grid-cols-2 gap-12 items-center">
-                        {/* LEFT : TEXT CONTENT */}
-                        <div>
-                            <p className="text-md text-(--first) mb-2">// Creative Showcase</p>
+                    <div>
+                        <p className="text-md text-(--first) mb-2">// Creative Showcase</p>
 
-                            <h2 className="text-4xl lg:text-5xl font-semibold leading-tight mb-6">
-                                Creative Post &{" "}
-                                <span className="text-(--first)">Template Design</span>
-                            </h2>
-                        </div>
+                        <h2 className="text-4xl lg:text-5xl font-semibold leading-tight">
+                            Creative Post &{" "}
+                            <span className="text-(--first)">Template Design</span>
+                        </h2>
 
-                        {/* RIGHT : IMAGE / MOCKUP */}
-                        <div className="flex justify-end">
-                            <div className="border-l border-white/5 p-8 text-left">
-
-                                <p className="text-gray-400 pt-4">
-                                    All designs are clean, modern, and suitable for Instagram & Facebook.
-                                </p>
-                            </div>
-                        </div>
+                        <p className="text-gray-400 pt-4 mb-6">
+                            All designs are clean, modern, and suitable for Instagram & Facebook.
+                        </p>
                     </div>
                 </div>
 
@@ -123,7 +117,7 @@ const Fun4RajkotCreativeSlider = () => {
                                     {activeCategory.title}
                                 </h3>
                                 <p className="text-gray-400 text-sm">
-                                    // Various Designs
+                                    {activeCategory.subTitle}
                                 </p>
                             </div>
 

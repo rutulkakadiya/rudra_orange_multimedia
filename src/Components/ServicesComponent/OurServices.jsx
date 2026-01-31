@@ -40,31 +40,31 @@ const services = [
 
   {
     title: "Brochure Design",
-    desc: "Targeted campaigns that boost visibility, engagement, and conversions.",
+    desc: "Clear Message. Smart Design.",
     image: catelogdesign,
     icon: Megaphone,
   },
   {
     title: "Social Media Branding",
-    desc: "Modern, responsive interfaces designed for performance and aesthetics.",
+    desc: "Design that speaks for your brand.",
     image: socialmediapost,
     icon: Monitor,
   },
   {
     title: "Outdoor Hoarding Banners",
-    desc: "Modern, responsive interfaces designed for performance and aesthetics.",
+    desc: "Where Your Brand Takes the Spotlight.",
     image: outdoorhoarding,
     icon: Flag,
   },
   {
     title: "Packaging Design",
-    desc: "Modern, responsive interfaces designed for performance and aesthetics.",
+    desc: "First Impression Starts with Packaging.",
     image: packagingdesign,
     icon: Package,
   },
   {
     title: "Paper Printing",
-    desc: "Modern, responsive interfaces designed for performance and aesthetics.",
+    desc: "Professional Printing Solutions.",
     image: paperprinting,
     icon: ScrollText,
   },

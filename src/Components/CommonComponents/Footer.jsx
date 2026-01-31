@@ -163,9 +163,9 @@ export default function Footer() {
                 </div>
                 <h3 className="font-semibold text-lg py-4">LOCATION</h3>
                 <p className="text-gray-400 group-hover:text-white duration-1300 text-sm leading-relaxed text-center">
-                 211, Alpha One, Opp
+                 211, Alpha One, Opp.
                  Kruti Onella, 150ft.
-                 Ring Road, <br /> Rajkot, Gujarat-360004
+                 Ring Road, <br /> Rajkot, Gujarat-360004.
                 </p>
               </div>
             </div>
@@ -215,7 +215,7 @@ export default function Footer() {
                 <div className='w-15 h-15 rounded-full bg-(--first) group-hover:bg-black duration-1300 flex justify-center items-center'>
                   <Mail className="w-7 h-7 shrink-0 mt-1" />
                 </div>
-                <h3 className="font-semibold text-lg py-4">TALK US</h3>
+                <h3 className="font-semibold text-lg py-4">STAY UPDATED</h3>
                 <div className="text-center flex flex-col text-gray-400">
                   <a target='_blank' href="https://www.facebook.com/orangemultimediarajkot" className="hover:text-black group-hover:text-white cursor-pointer duration-700 transition">
                     Facebook

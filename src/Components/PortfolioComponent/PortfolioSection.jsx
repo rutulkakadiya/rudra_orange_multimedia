@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useSearchParams } from "react-router-dom";
 import { X, ArrowLeft } from "lucide-react";
 import logodesign from '../../assets/Portfolio/Cover_Photo/Logo.jpg';
 import videography from '../../assets/Portfolio/Cover_Photo/Video.jpg';
@@ -574,7 +575,13 @@ const PortfolioSection = () => {
     },
   ];
 
-  const [activeCategory, setActiveCategory] = useState(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const categoryParam = searchParams.get("category");
+  const activeCategory = categoryParam
+    ? data.find((item) => item.category === categoryParam)
+    : null;
+
+  // const [activeCategory, setActiveCategory] = useState(null);
   const [activeImage, setActiveImage] = useState(null);
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -602,7 +609,7 @@ const PortfolioSection = () => {
             {data.map((item, i) => (
               <div
                 key={i}
-                onClick={() => setActiveCategory(item)}
+                onClick={() => setSearchParams({ category: item.category })}
                 className="relative cursor-pointer overflow-hidden
                            border border-white/5 
                            transition-all duration-500 p-4 sm:p-15"
@@ -642,7 +649,7 @@ const PortfolioSection = () => {
 
 
             <button
-              onClick={() => setActiveCategory(null)}
+              onClick={() => setSearchParams({})}
               className="my-10 px-10"
             >
               <RippleButton className="">Back to portfolio</RippleButton>
