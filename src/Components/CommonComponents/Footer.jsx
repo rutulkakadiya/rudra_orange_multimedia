@@ -163,9 +163,9 @@ export default function Footer() {
                 </div>
                 <h3 className="font-semibold text-lg py-4">LOCATION</h3>
                 <p className="text-gray-400 group-hover:text-white duration-1300 text-sm leading-relaxed text-center">
-                 211, Alpha One, Opp.<br />
-                 Kruti Onella, 150ft.<br />
-                 Ring Road, Rajkot
+                 211, Alpha One, Opp
+                 Kruti Onella, 150ft.
+                 Ring Road, <br /> Rajkot, Gujarat-360004
                 </p>
               </div>
             </div>
@@ -183,7 +183,7 @@ export default function Footer() {
                 <p className="text-gray-400 group-hover:text-white duration-700 text-sm leading-relaxed text-center">
                   Phone: + 91 97123 77811<br />
                   Phone: + 91 80000 77811 <br />
-                  Email: theorangemultimedia <br />@gmail.com<br />
+                  Email: theorangemultimedia@gmail.com<br />
                   
                 </p>
               </div>

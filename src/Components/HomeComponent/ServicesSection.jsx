@@ -221,7 +221,7 @@ export default function ServicesSection() {
     },
     {
       title: "GRAPHIC DESIGNING",
-      desc: "Logo Design | Stationery Design | Catalogue & Brochure Design Poster Design | Packaging Design | Banner Design | Hoarding Design ",
+      desc: "Logo Design | Stationery Design | Catalogue & Brochure Design | Poster Design | Packaging Design | Banner Design | Hoarding Design ",
       icon: Palette,
       image: "https://i.pinimg.com/originals/05/09/83/05098300a72598712aa3580d889af685.gif",
     },
@@ -245,7 +245,7 @@ export default function ServicesSection() {
     },
     {
       title: "ALL TYPE OF PRINTING WORK",
-      desc: "Logos, guidelines, templates & everything your brand needs.",
+      desc: "Commercial Printing | Packaging Printing | Advertising & Promotional Printing | Offset & Specialty Printing | Digital & Customized Printing | Textile & Merchandise Printing | Large Format Printing",
       icon: Layers,
       image: "https://i.pinimg.com/originals/26/ba/74/26ba743438c34193166547e518b6e6ea.gif",
     },
