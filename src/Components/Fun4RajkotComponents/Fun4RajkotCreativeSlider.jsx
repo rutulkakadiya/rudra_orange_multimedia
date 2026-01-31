@@ -60,8 +60,8 @@ const Fun4RajkotCreativeSlider = () => {
         <section className="container mx-auto border-x border-white/5 overflow-hidden text-white">
             <div className="px-6 lg:px-0 border border-white/5">
 
-                {/* Header is always visible at top */}
-                <div className="px-6 border-b border-white/5 pt-[30px] sm:pt-0">
+                
+                <div className="px-6 border-b border-white/5 pt-[30px] sm:pt-[50px]">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         {/* LEFT : TEXT CONTENT */}
                         <div>
@@ -74,28 +74,8 @@ const Fun4RajkotCreativeSlider = () => {
                         </div>
 
                         {/* RIGHT : IMAGE / MOCKUP */}
-                        <div className="flex justify-center">
+                        <div className="flex justify-end">
                             <div className="border-l border-white/5 p-8 text-left">
-                                <p className="text-xl text-gray-300 mb-6 leading-relaxed">
-                                    We provide professional update plate (template) designs and
-                                    advertisement creatives, including:
-                                </p>
-
-                                <ul className="grid sm:grid-cols-2 gap-4 mb-4">
-                                    {[
-                                        "Static Post",
-                                        "Promotional Banners",
-                                        "Brand-focused Social Media Posts",
-                                    ].map((item, i) => (
-                                        <li
-                                            key={i}
-                                            className="flex items-center gap-3 text-white font-medium"
-                                        >
-                                            <CheckCircle className="text-(--first)" size={20} />
-                                            {item}
-                                        </li>
-                                    ))}
-                                </ul>
 
                                 <p className="text-gray-400 pt-4">
                                     All designs are clean, modern, and suitable for Instagram & Facebook.
@@ -143,7 +123,7 @@ const Fun4RajkotCreativeSlider = () => {
                                     {activeCategory.title}
                                 </h3>
                                 <p className="text-gray-400 text-sm">
-                                    // {activeCategory.works.length} Designs Available
+                                    // Various Designs
                                 </p>
                             </div>
 

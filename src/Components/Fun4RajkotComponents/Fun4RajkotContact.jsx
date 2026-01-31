@@ -12,7 +12,7 @@ const Fun4RajkotContact = () => {
                 </h2>
 
                 <p className="text-lg text-gray-300 mb-8 leading-relaxed">
-                    Promote your business, event, or service with Fun4Rajkot and get noticed by the local audience.
+                    Promote your business, event, or service with fun4rajkot and get noticed by the local audience.
                 </p>
 
                 <div className="space-y-4 mb-8">

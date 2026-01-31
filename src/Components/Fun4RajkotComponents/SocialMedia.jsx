@@ -15,12 +15,12 @@ export default function SocialMedia() {
                         <p className="text-md text-(--first) mb-2">// Digital Outreach Platform</p>
 
                         <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
-                            Fun4Rajkot
+                            fun4rajkot
                             <span className="text-(--first)"> by Orange Multimedia</span>
                         </h2>
 
                         <p className="mt-6 text-white text-lg leading-relaxed">
-                            Fun4Rajkot is a city-centric lifestyle platform connecting Rajkot
+                            fun4rajkot is a city-centric lifestyle platform connecting Rajkot
                             through trending places, events, food spots and local stories.
                             Strategized, created and managed by Orange Multimedia.
                         </p>
@@ -46,7 +46,7 @@ export default function SocialMedia() {
                                     className="flex items-center gap-3 bg-[#1877F2] text-white px-6 py-3 rounded-xl font-medium hover:scale-105 transition shadow-lg"
                                 >
                                     <FaFacebook className="text-2xl" />
-                                    <span>Fun4Rajkot</span>
+                                    <span>fun4rajkot</span>
                                 </a>
                             </div>
                         </div>
