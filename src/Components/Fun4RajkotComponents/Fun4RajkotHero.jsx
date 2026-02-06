@@ -27,13 +27,7 @@ const Fun4RajkotHero = () => {
                     </p>
 
                     <div className="mt-8">
-                        <a
-                            href="https://www.instagram.com/fun4rajkot"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                        >
                             <RippleButton>Connect With Us</RippleButton>
-                        </a>
                     </div>
                 </div>
 
