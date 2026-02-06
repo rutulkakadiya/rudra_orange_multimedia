@@ -10,10 +10,10 @@ const Fun4RajkotPage = () => {
     return (
         <div className="bg-(--dark-black) text-white font-outfit">
             <Fun4RajkotHero />
+            <Fun4RajkotPlatforms />
             <Fun4RajkotWhatWeDo />
             <Fun4RajkotCreativeSlider />
             <Fun4RajkotWhyChoose />
-            <Fun4RajkotPlatforms />
 
             <section className="container mx-auto border border-white/5 text-white">
                 <div className="grid grid-cols-1 lg:grid-cols-2">

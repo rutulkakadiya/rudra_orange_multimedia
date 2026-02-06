@@ -186,25 +186,25 @@ const TestimonialSlider = () => {
     {
       text: "Really good experience with this branding agency...The designs were creative and the work was delivered on time...Happy with the overall service.",
       name: "Krunal Movaliya",
-      position: "Gold Lion Resort",
+      position: "Gold Lion Resort - Sasan Gir",
       bg: "orange",
     },
     {
       text: "Good branding agency with creative design ideas, Smooth process and timely delivery, Satisfied with their work.",
       name: "Krunal Mehta",
-      position: "Honest Restaurant",
+      position: "Honest Restaurant - Australia",
       bg: "black",
     },
     {
       text: "Excellent branding agency! Very creative design work with great attention to detail. Timely delivery and smooth coordination throughout the project. Highly recommended for branding and design services.",
-      name: "Vijay Bhai",
-      position: "Dharvi Consultant Pvt. Ltd.",
+      name: "Vijay Ghelani",
+      position: "Dharvi Consultant Pvt. Ltd. - Rajkot",
       bg: "orange",
     },
     {
       text: "Creative designs with fast response and good support throughout the project. Happy with the service.",
       name: "Gaurav Markana",
-      position: "American Color & Kohinoor Color",
+      position: "American Color - Rajkot & Kohinoor Paint - Shapar(Veraval)",
       bg: "black",
     },
    

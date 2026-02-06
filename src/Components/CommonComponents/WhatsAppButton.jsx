@@ -4,10 +4,14 @@ import { FaWhatsapp } from 'react-icons/fa';
 
 const WhatsAppButton = () => {
     const [isHovered, setIsHovered] = useState(false);
-    const phoneNumber = '+919712377811'; // Replace with your WhatsApp number
-
+    
     const handleClick = () => {
-        window.open(`https://wa.me/${phoneNumber}`, '_blank');
+        const phoneNumber = '+919712377811'; // Replace with your WhatsApp number
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        const whatsappURL = isMobile
+            ? `https://api.whatsapp.com/send?phone=${phoneNumber}`
+            : `https://web.whatsapp.com/send?phone=${phoneNumber}`;
+        window.open(whatsappURL, '_blank');
     };
 
     return (

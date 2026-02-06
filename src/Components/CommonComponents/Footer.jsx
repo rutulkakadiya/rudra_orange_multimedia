@@ -76,25 +76,25 @@
 //           {/* Social Media Card */}
 //           <div className="h-80 border border-white/5 transition flex justify-center items-center">
 //             <div className="flex items-start gap-4 mb-4">
-             
+
 //               <div className="w-full flex flex-col justify-center items-center">
 //                 <div className='w-15 h-15 rounded-full bg-(--first) flex justify-center items-center'>
 //                       <Mail className="w-7 h-7 shrink-0 mt-1" />
 //                 </div>
-               
+
 //                 <h3 className="font-semibold text-lg py-4">SOCIAL MEDIA</h3>
 //                 <div className="text-center flex flex-col text-gray-400">
 //                   <a to="#" className="hover:text-gray-400 transition">
 //                     Facebook
 //                   </a>
-                
+
 //                   <a to="#" className="hover:text-gray-400 transition">
 //                    Instagram
 //                   </a>
 //                     <a to="#" className="hover:text-gray-400 transition">
 //                    Linkdin
 //                   </a>
-               
+
 //                 </div>
 //               </div>
 //             </div>
@@ -138,14 +138,15 @@ export default function Footer() {
       <div className="border-b border-white/5 px-4 sm:px-8 py-6 sm:py-8">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-6">
           <div className="text-2xl sm:text-3xl font-bold">
-          <img src={logo} className='w-60' alt="" />
+            <img src={logo} className='w-60' alt="" />
           </div>
           <nav className="flex flex-wrap justify-center gap-4 sm:gap-8 text-base sm:text-lg text-gray-400">
             <Link to="/" className="hover:text-(--first) duration-500 cursor-pointer transition">Home</Link>
-            <Link to="/about" className="hover:text-(--first) duration-500 cursor-pointer transition">About</Link>
+            <Link to="/fun4rajkot" className="hover:text-(--first) duration-500 cursor-pointer transition">fun4rajkot</Link>
+            <Link to="/about" className="hover:text-(--first) duration-500 cursor-pointer transition">About Us</Link>
             <Link to="/services" className="hover:text-(--first) duration-500 cursor-pointer transition">Services</Link>
             <Link to="/portfolio" className="hover:text-(--first) duration-500 cursor-pointer transition">Portfolio</Link>
-            <Link to="/contact" className="hover:text-(--first) duration-500 cursor-pointer transition">Contact</Link>
+            <Link to="/contact" className="hover:text-(--first) duration-500 cursor-pointer transition">Contact Us</Link>
           </nav>
         </div>
       </div>
@@ -163,9 +164,9 @@ export default function Footer() {
                 </div>
                 <h3 className="font-semibold text-lg py-4">LOCATION</h3>
                 <p className="text-gray-400 group-hover:text-white duration-1300 text-sm leading-relaxed text-center">
-                 211, Alpha One, Opp.
-                 Kruti Onella, 150ft.
-                 Ring Road, <br /> Rajkot, Gujarat-360004.
+                  ORANGE MULTIMEDIA <br />
+                  211, Alpha One, Opp. Kruti Onella, 150ft. Ring Road,
+                  <br />Rajkot, Gujarat-360004.
                 </p>
               </div>
             </div>
@@ -184,7 +185,7 @@ export default function Footer() {
                   Phone: + 91 97123 77811<br />
                   Phone: + 91 80000 77811 <br />
                   Email: theorangemultimedia@gmail.com<br />
-                  
+
                 </p>
               </div>
             </div>
@@ -200,7 +201,7 @@ export default function Footer() {
                 </div>
                 <h3 className="font-semibold text-lg my-4">WORKING HOURS</h3>
                 <p className="text-gray-400 group-hover:text-white duration-700 text-sm leading-relaxed text-center">
-                  Mon - Sat: 9:00 - 19:00<br />
+                  Mon to Sat: 9:00 - 7:00<br />
                   Sunday: Closed
                 </p>
               </div>
@@ -230,11 +231,11 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Large Text Section */}  
+      {/* Large Text Section */}
       <div className="border-b border-white/5 px-4 sm:px-8 py-8 sm:py-8 overflow-hidden">
         <div className="container mx-auto">
           <h2 className="text-4xl sm:text-6xl md:text-7xl lg:text-9xl translate-y-10 md:translate-y-13 font-bold leading-none tracking-tight text-center">
-            <span className='text-(--first)'>ORANGE</span> MULTIMEDIA
+            WE CREATE <span className='text-(--first)'>BRAND</span>
           </h2>
         </div>
       </div>

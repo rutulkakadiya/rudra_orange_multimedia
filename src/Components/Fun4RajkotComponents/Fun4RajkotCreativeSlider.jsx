@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { CheckCircle, X } from 'lucide-react';
 import RippleButton from '../CommonComponents/RippleButton';
@@ -22,8 +23,19 @@ import social_media_post_7 from '../../assets/fun4rajkot/3 Brand-focused Social 
 import social_media_post_8 from '../../assets/fun4rajkot/3 Brand-focused Social Media Posts/08.jpg'
 
 const Fun4RajkotCreativeSlider = () => {
-    const [activeCategory, setActiveCategory] = useState(null);
+    const [searchParams, setSearchParams] = useSearchParams();
+    const categoryParam = searchParams.get("category");
+    // const [activeCategory, setActiveCategory] = useState(null);
     const [activeImage, setActiveImage] = useState(null);
+
+    useEffect(() => {
+        if (categoryParam) {
+            const element = document.getElementById("creative-showcase");
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [categoryParam]);
 
     const creativeShowcase = [
         {
@@ -59,8 +71,12 @@ const Fun4RajkotCreativeSlider = () => {
         }
     ];
 
+    const activeCategory = categoryParam
+        ? creativeShowcase.find((item) => item.title === categoryParam)
+        : null;
+
     return (
-        <section className="container mx-auto border-x border-white/5 overflow-hidden text-white">
+        <section id="creative-showcase" className="container mx-auto border-x border-white/5 overflow-hidden text-white">
             <div className="px-6 lg:px-0 border border-white/5">
 
 
@@ -85,7 +101,7 @@ const Fun4RajkotCreativeSlider = () => {
                         {creativeShowcase.map((item, index) => (
                             <div
                                 key={index}
-                                onClick={() => setActiveCategory(item)}
+                                onClick={() => setSearchParams({ category: item.title })}
                                 className="h-[400px] md:h-[600px] w-full border-r border-b p-3 md:p-6 border-white/5 overflow-hidden relative group cursor-pointer"
                             >
                                 <img
@@ -122,7 +138,7 @@ const Fun4RajkotCreativeSlider = () => {
                             </div>
 
                             <button
-                                onClick={() => setActiveCategory(null)}
+                                onClick={() => setSearchParams({})}
                             >
                                 <RippleButton>Back to Categories</RippleButton>
                             </button>

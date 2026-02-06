@@ -107,7 +107,7 @@ const OurServices = () => {
                          transition-all duration-500"
             >
               {/* IMAGE */}
-              <div className="relative h-90 overflow-hidden rounded-2xl">
+              <Link to={`/portfolio?category=${service.title}`} className="relative h-90 overflow-hidden rounded-2xl block">
                 <img
                   src={service.image}
                   alt={service.title}
@@ -115,7 +115,7 @@ const OurServices = () => {
                              group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-black/30" />
-              </div>
+              </Link>
 
               {/* ICON */}
               <div className="relative -mt-8 flex justify-center">
@@ -133,13 +133,15 @@ const OurServices = () => {
               {/* CONTENT */}
               <div className="text-center px-6 pb-8 pt-4">
                 <h3 className="text-xl font-semibold mb-3">
-                  {service.title}
+                  <Link to={`/portfolio?category=${service.title}`}>
+                    {service.title}
+                  </Link>
                 </h3>
                 <p className="text-sm text-gray-400 leading-relaxed mb-4">
                   {service.desc}
                 </p>
                 <Link
-                  to="/portfolio"
+                  to={`/portfolio?category=${service.title}`}
                   className="text-sm font-semibold text-(--first)
                              hover:underline tracking-wide"
                 >

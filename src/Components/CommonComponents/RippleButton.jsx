@@ -16,6 +16,8 @@ export default function RippleButton({
     ripple.style.top = `${y}px`;
   };
 
+  
+
   return (
     <>
       {/* INLINE CSS */}

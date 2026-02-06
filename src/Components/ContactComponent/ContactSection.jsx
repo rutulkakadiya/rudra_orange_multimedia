@@ -1,10 +1,51 @@
-import React from "react";
+import React, { useState } from "react";
 import { Phone, Mail, MapPin } from "lucide-react";
 import RippleButton from "../CommonComponents/RippleButton";
 import RealBookPDFViewer from "../PortfolioComponent/RealBookPDFViewer";
 
 
 const ContactSection = () => {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleClick = () => {
+    const phoneNumber = "919712377811";
+
+    const message = encodeURIComponent(
+      `Hello Orange Multimedia Team,
+
+I am interested in your digital services.
+
+Name: ${formData.name}
+Email: ${formData.email}
+Subject: ${formData.subject}
+
+Message:
+${formData.message}
+
+Looking forward to your response.
+Thank you.`
+    );
+
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+    const whatsappURL = isMobile
+      ? `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${message}`
+      : `https://web.whatsapp.com/send?phone=${phoneNumber}&text=${message}`;
+
+    window.open(whatsappURL, "_blank");
+  };
+
+
   return (
     <section className="bg-(--dark-black) text-white border-t border-white/5">
       <div className="container mx-auto">
@@ -25,24 +66,36 @@ const ContactSection = () => {
             <form className="space-y-6">
               <input
                 type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
                 placeholder="Your Name"
                 className="w-full bg-transparent border border-white/10 px-5 py-4
                            focus:border-(--first) outline-none transition"
               />
               <input
                 type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
                 placeholder="Your Email"
                 className="w-full bg-transparent border border-white/10 px-5 py-4
                            focus:border-(--first) outline-none transition"
               />
               <input
                 type="text"
+                name="subject"
+                value={formData.subject}
+                onChange={handleChange}
                 placeholder="Subject"
                 className="w-full bg-transparent border border-white/10 px-5 py-4
                            focus:border-(--first) outline-none transition"
               />
               <textarea
                 rows="5"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
                 placeholder="Your Message"
                 className="w-full bg-transparent border border-white/10 px-5 py-4
                            focus:border-(--first) outline-none transition resize-none"
@@ -57,7 +110,7 @@ const ContactSection = () => {
               </button> */}
 
               <div className="">
-                <RippleButton className="text-sm">Send Message</RippleButton>
+                <RippleButton onClick={handleClick} className="text-sm">Send Message</RippleButton>
               </div>
             </form>
           </div>
@@ -97,13 +150,14 @@ const ContactSection = () => {
         {/* ================= MAP ================= */}
         <div className="w-full h-130 p-15 border-t border-white/5">
           <iframe
-            title="Google Map"
-            className="w-full h-full grayscale invert border-0"
+            title="Orange Multimedia - Rajkot"
+            className="w-full h-full border-0"
             loading="lazy"
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Rajkot,Gujarat,India&output=embed"
-          />
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3668.563394984935!2d70.786662!3d22.2539615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3959cb346b4482a1%3A0x998e98c9bfe1e1df!2sOrange%20Multimedia%20-%20Rajkot!5e0!3m2!1sen!2sin!4v1700000000000"
+          ></iframe>
+
         </div>
       </div>
 
