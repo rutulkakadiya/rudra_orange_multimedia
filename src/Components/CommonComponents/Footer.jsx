@@ -201,7 +201,7 @@ export default function Footer() {
                 </div>
                 <h3 className="font-semibold text-lg my-4">WORKING HOURS</h3>
                 <p className="text-gray-400 group-hover:text-white duration-700 text-sm leading-relaxed text-center">
-                  Mon to Sat: 9:00 - 7:00<br />
+                  Mon to Sat: 9:00 AM - 7:00 PM<br />
                   Sunday: Closed
                 </p>
               </div>
